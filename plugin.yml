@@ -1,1 +1,56 @@
-
+plugin:
+  json-po:
+    shortCut: j
+    confirm: false
+    description: "json"
+    scopes:
+      - pod
+    command: sh
+    background: false
+    args:
+      - -c
+      - "kubectl get po $NAME -n $NAMESPACE --context $CONTEXT -ojson | fx"
+  json-svc:
+    shortCut: j
+    confirm: false
+    description: "json"
+    scopes:
+      - svc
+    command: sh
+    background: false
+    args:
+      - -c
+      - "kubectl get svc $NAME -n $NAMESPACE --context $CONTEXT -ojson | fx"
+  json-deploy:
+    shortCut: j
+    confirm: false
+    description: "json"
+    scopes:
+      - deploy
+    command: sh
+    background: false
+    args:
+      - -c
+      - "kubectl get deploy $NAME -n $NAMESPACE --context $CONTEXT -ojson | fx"
+  json-sts:
+    shortCut: j
+    confirm: false
+    description: "json"
+    scopes:
+      - sts
+    command: sh
+    background: false
+    args:
+      - -c
+      - "kubectl get sts $NAME -n $NAMESPACE --context $CONTEXT -ojson | fx"
+  json-node:
+      shortCut: j
+      confirm: false
+      description: "json"
+      scopes:
+        - node
+      command: sh
+      background: false
+      args:
+        - -c
+        - "kubectl get node $NAME -n $NAMESPACE --context $CONTEXT -ojson | fx"
