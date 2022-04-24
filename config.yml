@@ -14,8 +14,8 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: kind-kind
-  currentCluster: kind-kind
+  currentContext: kubernetes-admin@kubernetes
+  currentCluster: kubernetes
   clusters:
     kind-kind:
       namespace:
@@ -26,7 +26,7 @@ k9s:
       view:
         active: po
       featureGates:
-        nodeShell: false
+        nodeShell: true
       shellPod:
         image: busybox:1.31
         command: []
@@ -45,9 +45,9 @@ k9s:
         - yuanqijing
         - default
       view:
-        active: po
+        active: pod
       featureGates:
-        nodeShell: false
+        nodeShell: true
       shellPod:
         image: busybox:1.31
         command: []
